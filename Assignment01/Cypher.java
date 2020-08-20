@@ -11,38 +11,44 @@ public class Cypher {
         original = input;
     }
 
-    String cypherMethod() {
+    void cypherMethod() {
         String input = original;
         String[] arr = input.split("");
+        encrypted = "";
+
         for (int i = 0; i < input.length(); i += 2) {
             encrypted += arr[i];
         }
         for (int i = 1; i < input.length(); i += 2) {
             encrypted += arr[i];
         }
+
         encrypted = String.join("", encrypted);
-        return encrypted;
     }
 
-    String reverseMethod() {
+    void reverseMethod() {
         String input = encrypted;
         String[] arr = input.split("");
+        decrypted = "";
+
         int halfArr = Math.round(arr.length / 2) + (arr.length % (arr.length / 2));
         String[] oddArr = new String[halfArr], evenArr = new String[arr.length];
+
         for (int i = 0; i < halfArr; i++) {
             oddArr[i] = arr[i];
         }
         for (int i = halfArr; i < arr.length; i++) {
             evenArr[i - halfArr] = arr[i];
         }
+
         for (int i = 0; i < halfArr; i++) {
             decrypted += oddArr[i];
             if (evenArr[i] != null) {
                 decrypted += evenArr[i];
             }
         }
+
         decrypted = String.join("", decrypted);
-        return decrypted;
     }
 
     String getOriginal() {
@@ -57,8 +63,6 @@ public class Cypher {
 
     void setOriginal(String input) {
         original = input;
-        encrypted = "";
-        decrypted = "";
     }
     void setEncrypted(String input) {
         encrypted = input;
@@ -68,6 +72,6 @@ public class Cypher {
     }
 
     public String toString() {
-        return "The encrypted message is " + encrypted + " and the decrypted message is " + decrypted; 
+        return "The encrypted message is '" + encrypted + "' and the decrypted message is '" + decrypted + "'"; 
     }
 }
