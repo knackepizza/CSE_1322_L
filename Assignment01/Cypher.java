@@ -66,7 +66,7 @@ public class Cypher {
     }
 
     public static void main(String[] args) {
-        Cypher c2 = new Cypher("shitballs");
+        Cypher c2 = new Cypher("shitball");
         System.out.println(c2.cypherMethod());
         System.out.println(c2.reverseMethod());
         // System.out.println(c2.reverseMethod());
