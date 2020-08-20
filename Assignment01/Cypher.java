@@ -59,6 +59,7 @@ public class Cypher {
 
     void setOriginal(String input) {
         original = input;
+        encrypted = "";
     }
     void setEncrypted(String input) {
         encrypted = input;
@@ -69,6 +70,8 @@ public class Cypher {
 
     public static void main(String[] args) {
         Cypher c2 = new Cypher("12345678901");
+        System.out.println(c2.cypherMethod());
+        c2.setOriginal("shit");
         System.out.println(c2.cypherMethod());
         System.out.println(c2.reverseMethod());
         // System.out.println(c2.reverseMethod());
