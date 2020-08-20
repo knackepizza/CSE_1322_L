@@ -27,10 +27,8 @@ public class Cypher {
     String reverseMethod() {
         String input = encrypted;
         String[] arr = input.split("");
-        // Halfarr doesn't work on odd numbers
         int halfArr = Math.round(arr.length / 2) + (arr.length % (arr.length / 2));
         String[] oddArr = new String[halfArr], evenArr = new String[arr.length];
-        System.out.println("halfarr " + halfArr + " arrlen " + arr.length);
         for (int i = 0; i < halfArr; i++) {
             oddArr[i] = arr[i];
         }
@@ -60,6 +58,7 @@ public class Cypher {
     void setOriginal(String input) {
         original = input;
         encrypted = "";
+        decrypted = "";
     }
     void setEncrypted(String input) {
         encrypted = input;
@@ -68,12 +67,7 @@ public class Cypher {
         decrypted = input;
     }
 
-    public static void main(String[] args) {
-        Cypher c2 = new Cypher("12345678901");
-        System.out.println(c2.cypherMethod());
-        c2.setOriginal("shit");
-        System.out.println(c2.cypherMethod());
-        System.out.println(c2.reverseMethod());
-        // System.out.println(c2.reverseMethod());
+    public String toString() {
+        return "The encrypted message is " + encrypted + " and the decrypted message is " + decrypted; 
     }
 }
