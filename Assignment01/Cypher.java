@@ -26,29 +26,23 @@ public class Cypher {
         encrypted = odd + even;
     }
 
-    void reverseMethod() {
-        String input = encrypted;
-        String[] arr = input.split("");
-        decrypted = "";
-
-        int halfArr = Math.round(arr.length / 2) + (arr.length % (arr.length / 2));
-        String[] oddArr = new String[halfArr], evenArr = new String[arr.length];
-
-        for (int i = 0; i < halfArr; i++) {
-            oddArr[i] = arr[i];
-        }
-        for (int i = halfArr; i < arr.length; i++) {
-            evenArr[i - halfArr] = arr[i];
-        }
-
-        for (int i = 0; i < halfArr; i++) {
-            decrypted += oddArr[i];
-            if (evenArr[i] != null) {
-                decrypted += evenArr[i];
+    void reverseMethod() {        
+        if (encrypted.length() % 2 == 0) {
+            int x = 0;
+            for (int i = encrypted.length() / 2; i < encrypted.length(); i++) {
+                decrypted += encrypted.charAt(x);
+                decrypted += encrypted.charAt(i);
+                x++;
             }
+        } else {
+            int x = 0;
+            for (int i = encrypted.length(); i < encrypted.length(); i++) {
+                decrypted += encrypted.charAt(x);
+                decrypted += encrypted.charAt(i);
+                x++;
+            }
+            decrypted += encrypted.charAt(x);
         }
-
-        decrypted = String.join("", decrypted);
     }
 
     String getOriginal() {
