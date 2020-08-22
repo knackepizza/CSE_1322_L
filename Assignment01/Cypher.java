@@ -12,18 +12,18 @@ public class Cypher {
     }
 
     void cypherMethod() {
-        String input = original;
-        String[] arr = input.split("");
-        encrypted = "";
+        String odd = "";
+        String even = "";
 
-        for (int i = 0; i < input.length(); i += 2) {
-            encrypted += arr[i];
+        for (int i = 0; i < original.length(); i++) {
+            if (i % 2 == 0) {
+                odd += original.charAt(i);
+            } else {
+                even += original.charAt(i);
+            }
         }
-        for (int i = 1; i < input.length(); i += 2) {
-            encrypted += arr[i];
-        }
-
-        encrypted = String.join("", encrypted);
+        
+        encrypted = odd + even;
     }
 
     void reverseMethod() {
