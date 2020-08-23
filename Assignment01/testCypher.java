@@ -9,9 +9,7 @@ public class testCypher extends Cypher {
         
         System.out.println(c1.toString());
 
-        Cypher c2 = new Cypher("123456789");
-
-        c2.setOriginal("Attack at Dawn");
+        Cypher c2 = new Cypher("Ram Ranch really rocks");
 
         c2.cypherMethod();
         c2.reverseMethod();
