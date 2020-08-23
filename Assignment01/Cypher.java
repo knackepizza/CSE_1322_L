@@ -11,6 +11,8 @@ public class Cypher {
         original = input;
     }
 
+    // Went to tutoring to make sure my solution worked
+    // my other solution for cypher and reverse methods were array oriented and they didn't like it
     void cypherMethod() {
         String odd = "";
         String even = "";
