@@ -1,6 +1,6 @@
 package Assignment01;
 
-public class testCypher extends Cypher {
+public class testCypher {
     public static void main(String[] args) {
         Cypher c1 = new Cypher();
 
