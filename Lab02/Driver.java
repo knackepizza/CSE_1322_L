@@ -2,7 +2,7 @@ package Lab02;
 
 public class Driver {
     public static void main(String[] args) {
-        stockItem s1 = new stockItem("TSLA", 312, 14, 2014.3f);
+        stockItem s1 = new stockItem("TSLA", 312, 14, 2014.3);
         
         // Demonstrating each method
 
@@ -22,7 +22,7 @@ public class Driver {
 
         // Demonstrate changing Price
         System.out.println("Initital Price: " + s1.getPrice());
-        s1.setPrice(1988.2f);
+        s1.setPrice(1988.2);
         System.out.println("Price set to 1988.2: " + s1.getPrice() + "\n");
 
         // Demonstrate changing Description
@@ -32,7 +32,7 @@ public class Driver {
 
         System.out.println(s1.toString());
 
-        stockItem s2 = new stockItem("NIO", 4089, 58, 15.8f);
+        stockItem s2 = new stockItem("NIO", 4089, 58, 15.8);
         System.out.println(s2.toString());
     }
 }

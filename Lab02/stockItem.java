@@ -3,7 +3,7 @@ package Lab02;
 public class stockItem {
     String description;
     int myID, myQuantity;
-    float myPrice;
+    double myPrice;
 
     public stockItem () {
         description = "Nice!";
@@ -12,7 +12,7 @@ public class stockItem {
         myPrice = 1.0f;
     }
 
-    public stockItem (String desc, int id, int quant, float price) {
+    public stockItem (String desc, int id, int quant, double price) {
         description = desc;
         myID = id;
         myQuantity = quant;
@@ -31,8 +31,8 @@ public class stockItem {
     int getQuantity() { return myQuantity; }
     void setQuantity(int input) { myQuantity = input; }
     
-    float getPrice() { return myPrice; }
-    void setPrice(float input) { myPrice = input; }
+    double getPrice() { return myPrice; }
+    void setPrice(double input) { myPrice = input; }
 
     public String toString() {
         return "ID: " + myID + ", Description: " + description + ", Quantity: " + myQuantity + ", Price: " + myPrice;
