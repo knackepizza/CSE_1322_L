@@ -31,5 +31,8 @@ public class Driver {
         System.out.println("Description set to SPY: " + s1.getDescription() + "\n");
 
         System.out.println(s1.toString());
+
+        stockItem s2 = new stockItem("NIO", 4089, 58, 15.8f);
+        System.out.println(s2.toString());
     }
 }
