@@ -16,7 +16,7 @@ public class Driver {
         System.out.println("Quantity set to 18: " + s1.getQuantity() + "\n");
         
         // Demonstrate changing ID
-        System.out.println("Initital ID:" + s1.getID());
+        System.out.println("Initital ID: " + s1.getID());
         s1.setID(4);
         System.out.println("ID set to 4: " + s1.getID() + "\n");
 
