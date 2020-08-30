@@ -1,9 +1,9 @@
 package Assignment02;
 
 public class Book {
-    int id, pages, minDaysOnHold;
-    boolean isCheckedIn;
-    String dueDate, title, author, genre;
+    private int id, pages, minDaysOnHold;
+    private boolean isCheckedIn;
+    private String dueDate, title, author, genre;
 
     public Book () {
         id = 234000123;
@@ -32,6 +32,12 @@ public class Book {
 
     // What is this method even for?
     public void putOnHold(int numDaysOnHold) {
+        this.minDaysOnHold = numDaysOnHold;
+    }
+    public void putOnHold(String uAuthor, String uTitle, int uPages, int numDaysOnHold) {
+        author = uAuthor;
+        title = uTitle;
+        pages = uPages;
         this.minDaysOnHold = numDaysOnHold;
     }
 

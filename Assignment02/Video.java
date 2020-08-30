@@ -1,9 +1,9 @@
 package Assignment02;
 
 public class Video {
-    int id, minDaysOnHold;
-    boolean isCheckedIn;
-    String dueDate, title, length;
+    private int id, minDaysOnHold;
+    private boolean isCheckedIn;
+    private String dueDate, title, length;
 
     public Video () {
         id = 516271;
@@ -28,6 +28,11 @@ public class Video {
 
     // What is this method even for?
     public void putOnHold(int numDaysOnHold) {
+        this.minDaysOnHold = numDaysOnHold;
+    }
+    public void putOnHold(String uTitle, String uLength, int numDaysOnHold) {
+        title = uTitle;
+        length = uLength;
         this.minDaysOnHold = numDaysOnHold;
     }
 
