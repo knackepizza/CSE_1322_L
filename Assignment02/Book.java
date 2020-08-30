@@ -24,12 +24,15 @@ public class Book {
     }
 
     public String toString() {
+        if (minDaysOnHold != 0) {
+            return "Id: " + id + "\nTitle: " + title + "\nChecked in: " + isCheckedIn + "\nAuthor" + author + "\nGenre: " + genre + "\nPages: " + pages + "\nNo. of Days On Hold: " + minDaysOnHold;
+        }
         return "Id: " + id + "\nTitle: " + title + "\nChecked in: " + isCheckedIn + "\nAuthor" + author + "\nGenre: " + genre + "\nPages: " + pages + "\n";
     }
 
     // What is this method even for?
     public void putOnHold(int numDaysOnHold) {
-        minDaysOnHold = numDaysOnHold;
+        this.minDaysOnHold = numDaysOnHold;
     }
 
     int getId() { return id; }

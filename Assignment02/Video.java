@@ -20,12 +20,15 @@ public class Video {
     }
 
     public String toString() {
+        if (minDaysOnHold != 0) {
+            return "Id: " + id + "\nTitle: " + title + "\nChecked in: " + isCheckedIn + "\nLength: " + length + "\nNo. of Days On Hold: " + minDaysOnHold;
+        }
         return "Id: " + id + "\nTitle: " + title + "\nChecked in: " + isCheckedIn + "\nLength: " + length + "\n";
     }
 
     // What is this method even for?
     public void putOnHold(int numDaysOnHold) {
-        minDaysOnHold = numDaysOnHold;
+        this.minDaysOnHold = numDaysOnHold;
     }
 
     int getId() { return id; }
