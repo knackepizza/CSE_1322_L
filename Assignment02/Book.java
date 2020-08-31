@@ -41,6 +41,13 @@ public class Book {
         this.minDaysOnHold = numDaysOnHold;
     }
 
+    public void checkOut() {
+        isCheckedIn = false;
+    }
+    public void checkIn() {
+        isCheckedIn = true;
+    }
+    
     int getId() { return id; }
     void setId(int input) { id = input; }
 
