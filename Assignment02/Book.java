@@ -3,7 +3,7 @@ package Assignment02;
 public class Book {
     private int id, pages, minDaysOnHold;
     private boolean isCheckedIn;
-    private String dueDate, title, author, genre;
+    private String title, author, genre;
 
     public Book () {
         id = 234000123;

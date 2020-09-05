@@ -3,7 +3,7 @@ package Assignment02;
 public class Video {
     private int id, minDaysOnHold;
     private boolean isCheckedIn;
-    private String dueDate, title, length;
+    private String title, length;
 
     public Video () {
         id = 516271;
