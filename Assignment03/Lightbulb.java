@@ -30,7 +30,15 @@ public class Lightbulb {
         return isOn;
     }
 
+    int convertBoolToInt(boolean val) {
+        if (val == true) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
     public String toString() {
-        return id + " " + isOn;
+        return id + " " + convertBoolToInt(isOn);
     }
 }
