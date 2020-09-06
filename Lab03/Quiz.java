@@ -38,7 +38,7 @@ public class Quiz {
         int i = 1;
         for (Question q : questions) {
             System.out.println("Q" + i + ": " + q.getQuestion());
-            System.out.println("A:" + q.getAnswer());
+            System.out.println("A: " + q.getAnswer());
             i++;
         }
     }

@@ -62,7 +62,7 @@ public class QuizTime extends Quiz {
                 if (!questions.isEmpty()) {
                     int i = 0;
                     for (Question q : questions) {
-                        System.out.println(i + ": " + q.getQuestion());
+                        System.out.println("Q" + i + ": " + q.getQuestion());
                         i++;
                     }
                     System.out.print("\n[?] Which question would you like to delete: ");
