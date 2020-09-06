@@ -27,21 +27,29 @@ public class Driver {
         }
 
         // Iterator to add a skip until max value
-        for (int skip = 0; skip < numOfLightbulbs; skip++) {
-            for (int i = skip; i < numOfLightbulbs; i += skip) {
-                lightbulbs.get(i).pullString();
-                System.out.println(lightbulbs.get(i).toString());
-                System.out.println("SKIP: " + skip + " | LB: " + i);
-                if (skip == 0) skip++;
+        for (int skip = 1; skip <= numOfLightbulbs; skip++) {
+            System.out.println("SKIP: " + skip);
+            for (Lightbulb l : lightbulbs) {
+                if (skip == 1 && l.getId() == 0){
+                    l.pullString();
+                } else if (l.getId() % skip == 0 && l.getId() != 0) {
+                    l.pullString();
+                }
+                System.out.println("BULB: " + l.toString());
             }
-            System.out.println("=== NEW SKIP ===");
+            System.out.println();
         }
 
-        for (int val : printVals) {
-            if (val < numOfLightbulbs) {
-                System.out.println(lightbulbs.get(val).toString());
-            }
+        // for (int val : printVals) {
+        //     if (val < numOfLightbulbs) {
+        //         System.out.println(lightbulbs.get(val).toString());
+        //     }
+        // }
+
+        for (Lightbulb l : lightbulbs) {
+            System.out.println(l.toString());
         }
+        
 
         scnr.close();
     }

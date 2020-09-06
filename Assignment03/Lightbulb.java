@@ -30,6 +30,10 @@ public class Lightbulb {
         return isOn;
     }
 
+    int getId() {
+        return id;
+    }
+
     int convertBoolToInt(boolean val) {
         if (val == true) {
             return 1;
