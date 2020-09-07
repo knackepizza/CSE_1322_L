@@ -26,13 +26,10 @@ public class Driver {
             lightbulbs.add(new Lightbulb(i));
         }
 
-        // Iterator to add a skip until max value
         for (int skip = 1; skip <= numOfLightbulbs; skip++) {
             System.out.println("SKIP: " + skip);
             for (Lightbulb l : lightbulbs) {
-                if (skip == 1 && l.getId() == 0){
-                    l.pullString();
-                } else if (l.getId() % skip == 0 && l.getId() != 0) {
+                if (l.getId() % skip == 0) {
                     l.pullString();
                 }
                 System.out.println("BULB: " + l.toString());
@@ -40,16 +37,11 @@ public class Driver {
             System.out.println();
         }
 
-        // for (int val : printVals) {
-        //     if (val < numOfLightbulbs) {
-        //         System.out.println(lightbulbs.get(val).toString());
-        //     }
-        // }
-
-        for (Lightbulb l : lightbulbs) {
-            System.out.println(l.toString());
-        }
-        
+        for (int val : printVals) {
+            if (val < numOfLightbulbs) {
+                System.out.println(lightbulbs.get(val).toString());
+            }
+        }    
 
         scnr.close();
     }
