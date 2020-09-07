@@ -1,7 +1,8 @@
 // Name: Nick Nettleton
-// Class: 1321L
+// Class: 1322L
 // Professor Adeojo
 
+// I use VSCODE and I need to have this to keep my classpath correct
 package Assignment03;
 
 public class Lightbulb {
@@ -33,7 +34,15 @@ public class Lightbulb {
     int getId() {
         return id;
     }
+    void setId(int i) {
+        id = i;
+    }
 
+    /*
+        You guys said that the isOnOrOff() should return a boolean, 
+        but in the examples you display it as a 0 or 1 value.
+        So I added a method to make it 0 or 1 like you guys have it.
+    */
     int convertBoolToInt(boolean val) {
         if (val == true) {
             return 1;
