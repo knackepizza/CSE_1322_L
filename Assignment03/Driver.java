@@ -27,14 +27,11 @@ public class Driver {
         }
 
         for (int skip = 1; skip <= numOfLightbulbs; skip++) {
-            System.out.println("SKIP: " + skip);
             for (Lightbulb l : lightbulbs) {
                 if (l.getId() % skip == 0) {
                     l.pullString();
                 }
-                System.out.println("BULB: " + l.toString());
             }
-            System.out.println();
         }
 
         for (int val : printVals) {
