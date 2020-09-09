@@ -33,7 +33,7 @@ public class Driver {
         // Traverse lightbulbs and only pull if multiple of number supplied
         for (int skip = 1; skip <= numOfLightbulbs; skip++) {
             for (Lightbulb l : lightbulbs) {
-                if (l.getId() % skip == 0) {
+                if ((lightbulbs.indexOf(l) + 1) % skip == 0) {
                     l.pullString();
                 }
             }
