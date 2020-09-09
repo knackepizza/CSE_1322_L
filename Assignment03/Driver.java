@@ -26,7 +26,7 @@ public class Driver {
         numOfLightbulbs = scnr.nextInt();
 
         // Add how many lightbulbs user said
-        for (int i = 0; i < numOfLightbulbs; i++) {
+        for (int i = 0; i <= numOfLightbulbs; i++) {
             lightbulbs.add(new Lightbulb(i));
         }
 
