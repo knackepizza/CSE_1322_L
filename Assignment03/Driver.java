@@ -26,7 +26,7 @@ public class Driver {
         numOfLightbulbs = scnr.nextInt();
 
         // Add how many lightbulbs user said
-        for (int i = 0; i <= numOfLightbulbs; i++) {
+        for (int i = 1; i <= numOfLightbulbs; i++) {
             lightbulbs.add(new Lightbulb(i));
         }
 
@@ -42,7 +42,11 @@ public class Driver {
         // Print values only in the specified array
         for (int val : printVals) {
             if (val < numOfLightbulbs) {
-                System.out.println(lightbulbs.get(val).toString());
+                /*
+                    val-1 because the value is human-readable (1, 2, 3)
+                    while the ArrayList is machine-readable (0, 1, 2)
+                */
+                System.out.println(lightbulbs.get(val - 1));
             }
         }    
 
