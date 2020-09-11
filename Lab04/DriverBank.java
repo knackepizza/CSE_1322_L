@@ -8,10 +8,6 @@ import java.util.Scanner;
 
 public class DriverBank {
     public static void main(String[] args) {
-        showMenu();
-    }
-
-    static void showMenu() {
         Scanner scnr = new Scanner(System.in);
         System.out.println("0 - Exit");
         System.out.println("1 - Create a Checking Account");
@@ -21,11 +17,8 @@ public class DriverBank {
         System.out.println("5 - Check Balance");
 
         System.out.print("Please Choose an Option: ");
-        doMenuOption(scnr.nextInt());
-    }
+        int input = scnr.nextInt();
 
-    static void doMenuOption(int input) {
-        Scanner scnr = new Scanner(System.in);
         switch (input) {
             case 1:
                 System.out.print("Please Enter Your Initital Balance (Minimum 500): ");
@@ -51,9 +44,7 @@ public class DriverBank {
             case 5:
                 System.out.println("Your balance: " + c.getBalance());
         }
-        while (input != 0) {
-            showMenu();
-        }
+        
         System.out.println("You chose Exit > Thanks for banking with us!");
     }
 }
