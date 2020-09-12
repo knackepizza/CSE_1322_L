@@ -51,10 +51,11 @@ public class Driver {
                     System.out.println();
                     break;
             }
-            scnr.close();
         }
 
         System.out.println("Thank you for trying my program!");
+        
+        scnr.close();
     }
 
     static void displayMenu() {
