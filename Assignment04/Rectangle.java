@@ -5,17 +5,17 @@
 package Assignment04;
 
 public class Rectangle extends Shape {
-    float width, height;
+    private float width, height;
 
     public Rectangle() {
         super();
-        width = super.width;
-        height = super.height;
+        width = super.getWidth();
+        height = super.getHeight();
     }
     public Rectangle(float w, float h) {
         super(w, h);
-        width = super.width;
-        height = super.height;
+        width = super.getWidth();
+        height = super.getHeight();
     }
 
     float calcArea() {

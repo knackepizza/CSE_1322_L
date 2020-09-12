@@ -5,18 +5,18 @@
 package Assignment04;
 
 public class Triangle extends Shape {
-    float width, height, length;
+    private float width, height, length;
 
     public Triangle() {
         super();
-        width = super.width;
-        height = super.height;
+        width = super.getWidth();
+        height = super.getHeight();
         length = 0f;
     }
     public Triangle(float w, float h, float l) {
         super(w, h);
-        width = super.width;
-        height = super.height;
+        width = super.getWidth();
+        height = super.getHeight();
         length = l;
     }
 

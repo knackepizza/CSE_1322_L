@@ -5,7 +5,7 @@
 package Assignment04;
 
 public class Shape {
-    float width, height;
+    private float width, height;
 
     public Shape() {
         width = 0f;
@@ -27,4 +27,7 @@ public class Shape {
     public String toString() {
         return "Width: " + width + ", Hight: " + height;
     }
+
+    float getWidth() { return width; }
+    float getHeight() { return height; }
 }
