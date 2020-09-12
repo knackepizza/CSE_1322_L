@@ -5,23 +5,28 @@
 package Lab04;
 
 public class BankAccount {
-    int accountNumber, balance;
+    int accountNumber;
+    float balance;
 
+    public BankAccount() {
+        accountNumber = 0;
+        balance = 0;
+    }
     public BankAccount(int accNum, int bal) {
         accountNumber = accNum;
         balance = bal;
     }
 
-    void deposit(int val) {
+    void deposit(float val) {
         balance += val;
     }
-    void withdraw(int val) {
+    void withdraw(float val) {
         balance -= val;
     }
 
     int getAccountNumber() { return accountNumber; }
     void setAccountNumber(int val) { accountNumber = val; }
 
-    int getBalance() { return balance; }
-    void setBalance(int val) { balance = val; }
+    float getBalance() { return balance; }
+    void setBalance(float val) { balance = val; }
 }

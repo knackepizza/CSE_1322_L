@@ -24,9 +24,17 @@ public class SavingsAccount extends BankAccount {
     }
     
     void addInterest() {
-        deposit(Math.round(interestRate * balance));
-        interestCalculated = (interestRate * balance) - balance;
+        // Convert interestRate to decimal form
+        interestRate /= 100;
+        interestCalculated = (interestRate * balance);
         System.out.println("Interest calculated: " + interestCalculated);
-        System.out.println("Your balance with interest is: " + (interestRate * balance) + balance);
+        deposit(interestCalculated);
+        System.out.println("Your balance with interest is: " + getBalance());
     }
+
+    float getInterestRate() { return interestRate; }
+    void setInterestRate(float val) { interestRate = val; }
+
+    float getInterestCalculated() { return interestCalculated; }
+    void setInterestCalculated(float val) { interestCalculated = val; }
 }
