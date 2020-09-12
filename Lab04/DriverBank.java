@@ -20,20 +20,29 @@ public class DriverBank {
             displayMenu();
             System.out.print("Please Choose an Option: ");
             input = scnr.nextInt();
+            System.out.println();
 
             switch (input) {
                 case 1:
-                    if (accountType != "") { accountType = "checking"; }
-                    System.out.print("Please Enter Your Initital Balance (Minimum 500): ");
-                    c.setBalance(scnr.nextFloat());
+                    if (accountType == "") { 
+                        accountType = "checking"; 
+                        System.out.print("Please Enter Your Initital Balance (Minimum 500): ");
+                        c.setBalance(scnr.nextFloat());
+                    } else {
+                        System.out.println("Savings Account already created.");
+                    }
                     break;
                 case 2:
-                if (accountType != "") { accountType = "savings"; }
+                if (accountType == "") { 
+                    accountType = "savings";
                     System.out.print("Please Enter Your Initital Balance (Minimum 1000): ");
                     s.setBalance(scnr.nextFloat());
                     System.out.print("What is the interest rate: ");
                     s.setInterestRate(scnr.nextFloat());
                     s.addInterest();
+                } else {
+                    System.out.println("Checking Account already created.");
+                }
                     break;
                 case 3:
                     if (accountType == "checking") {
@@ -47,7 +56,11 @@ public class DriverBank {
                     break;
                 case 4:
                     System.out.print("How much do you want to deposit? ");
-                    c.deposit(scnr.nextInt());
+                    if (accountType == "checking") {
+                        c.deposit(scnr.nextInt());
+                    } else {
+                        s.deposit(scnr.nextInt());
+                    }
                     break;
                 case 5:
                     if (accountType == "checking") {
@@ -55,7 +68,9 @@ public class DriverBank {
                     } else {
                         System.out.println("Your balance with interest is: " + s.getBalance());
                     }
+                    break;
             }
+            System.out.println();
         }
         
         System.out.println("You chose Exit > Thanks for banking with us!");
@@ -64,6 +79,7 @@ public class DriverBank {
     }
 
     static void displayMenu() {
+        System.out.println("---MENU---");
         System.out.println("0 - Exit");
         System.out.println("1 - Create a Checking Account");
         System.out.println("2 - Create a Savings Account");

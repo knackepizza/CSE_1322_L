@@ -28,7 +28,7 @@ public class SavingsAccount extends BankAccount {
         interestRate /= 100;
         interestCalculated = (interestRate * balance);
         System.out.println("Interest calculated: " + interestCalculated);
-        deposit(interestCalculated);
+        setBalance(interestCalculated + balance);
         System.out.println("Your balance with interest is: " + getBalance());
     }
 
