@@ -57,9 +57,9 @@ public class DriverBank {
                 case 4:
                     System.out.print("How much do you want to deposit? ");
                     if (accountType == "checking") {
-                        c.deposit(scnr.nextInt());
+                        c.deposit(scnr.nextFloat());
                     } else {
-                        s.deposit(scnr.nextInt());
+                        s.deposit(scnr.nextFloat());
                     }
                     break;
                 case 5:

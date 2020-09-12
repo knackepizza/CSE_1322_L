@@ -17,10 +17,10 @@ public class BankAccount {
         balance = bal;
     }
 
-    void deposit(int val) {
+    void deposit(float val) {
         balance += val;
     }
-    void withdraw(int val) {
+    void withdraw(float val) {
         balance -= val;
     }
 
