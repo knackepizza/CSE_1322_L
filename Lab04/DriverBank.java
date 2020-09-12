@@ -33,16 +33,16 @@ public class DriverBank {
                     }
                     break;
                 case 2:
-                if (accountType == "") { 
-                    accountType = "savings";
-                    System.out.print("Please Enter Your Initital Balance (Minimum 1000): ");
-                    s.setBalance(scnr.nextFloat());
-                    System.out.print("What is the interest rate: ");
-                    s.setInterestRate(scnr.nextFloat());
-                    s.addInterest();
-                } else {
-                    System.out.println("Checking Account already created.");
-                }
+                    if (accountType == "") { 
+                        accountType = "savings";
+                        System.out.print("Please Enter Your Initital Balance (Minimum 1000): ");
+                        s.setBalance(scnr.nextFloat());
+                        System.out.print("What is the interest rate: ");
+                        s.setInterestRate(scnr.nextFloat());
+                        s.addInterest();
+                    } else {
+                        System.out.println("Checking Account already created.");
+                    }
                     break;
                 case 3:
                     if (accountType == "checking") {
