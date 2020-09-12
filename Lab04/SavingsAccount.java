@@ -6,7 +6,7 @@ package Lab04;
 
 public class SavingsAccount extends BankAccount {
 
-    float interestRate, interestCalculated;
+    private float interestRate, interestCalculated;
 
     // Default constructor invokes super
     public SavingsAccount() {
@@ -26,9 +26,9 @@ public class SavingsAccount extends BankAccount {
     void addInterest() {
         // Convert interestRate to decimal form
         interestRate /= 100;
-        interestCalculated = (interestRate * balance);
+        interestCalculated = (interestRate * getBalance());
         System.out.println("Interest calculated: " + interestCalculated);
-        setBalance(interestCalculated + balance);
+        setBalance(interestCalculated + getBalance());
         System.out.println("Your balance with interest is: " + getBalance());
     }
 

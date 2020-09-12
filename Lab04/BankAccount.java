@@ -5,8 +5,8 @@
 package Lab04;
 
 public class BankAccount {
-    int accountNumber;
-    float balance;
+    private int accountNumber;
+    private float balance;
 
     public BankAccount() {
         accountNumber = 0;

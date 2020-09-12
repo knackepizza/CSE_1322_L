@@ -10,7 +10,7 @@ public class DriverBank {
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
 
-        BankAccount c = new BankAccount();
+        CheckingAccount c = new CheckingAccount();
         SavingsAccount s = new SavingsAccount();
 
         int input = 1;

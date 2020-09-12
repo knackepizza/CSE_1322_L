@@ -6,7 +6,8 @@ package Lab04;
 
 public class CheckingAccount extends BankAccount {
 
-    int noOfTransactions = 0, processingFee = 0;
+    private int noOfTransactions = 0;
+    private int processingFee = 0;
 
     // Default constructor invokes super
     public CheckingAccount() {
@@ -25,6 +26,10 @@ public class CheckingAccount extends BankAccount {
         }
 
         super.withdraw(val + processingFee);
+    }
+
+    int getWithdrawals() {
+        return noOfTransactions;
     }
     
 }
