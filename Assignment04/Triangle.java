@@ -5,24 +5,20 @@
 package Assignment04;
 
 public class Triangle extends Shape {
-    private float width, height, length;
+    private float length;
 
     public Triangle() {
         super();
-        width = super.getWidth();
-        height = super.getHeight();
         length = 0f;
     }
     public Triangle(float w, float h, float l) {
         super(w, h);
-        width = super.getWidth();
-        height = super.getHeight();
         length = l;
     }
 
     float calcArea() { 
-        double s = (width + height + length) / 2;
-        s = s * ((s - width) * (s - height) * (s - length));
+        double s = (super.getWidth() + super.getHeight() + length) / 2;
+        s = s * ((s - super.getWidth()) * (s - super.getHeight()) * (s - length));
         s = Math.sqrt(s);
         /*
             Couldn't find an easy way to convert this to float,
@@ -32,10 +28,10 @@ public class Triangle extends Shape {
     }
 
     float calcPerimeter() {
-        return (width + height + length);
+        return (super.getWidth() + super.getHeight() + length);
     }
 
     public String toString() {
-        return "Triangle Width = " + width + ", Height = " + height + ", Length = " + length + ", Perimeter = " + calcPerimeter() + ", Area = " + calcArea();
+        return "Triangle Width = " + super.getWidth() + ", Height = " + super.getHeight() + ", Length = " + length + ", Perimeter = " + calcPerimeter() + ", Area = " + calcArea();
     }
 }
