@@ -16,5 +16,7 @@ public class testFib {
 
         System.out.println("The Fibonacci value at position " + input + " using iteration is " + new FibIteration().getFib(input));
         System.out.println("The Fibonacci value at position " + input + " using a formula is " + new FibFormula().getFib(input));
+
+        scnr.close();
     }
 }
