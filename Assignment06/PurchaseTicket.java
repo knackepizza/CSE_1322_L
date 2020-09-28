@@ -23,7 +23,12 @@ public class PurchaseTicket {
             switch (input) {
                 case 1:
                     System.out.println("How many days until the game?");
-                    temp = new AdvanceBooking(scnr.nextInt());
+                    int days = scnr.nextInt();
+                    if (days > 0) {
+                        temp = new AdvanceBooking(input);
+                    } else {
+                        temp = new CurrentBooking();
+                    }
                     tickets.add(temp);
                     System.out.println(temp);
                     break;

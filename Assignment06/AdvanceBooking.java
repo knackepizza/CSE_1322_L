@@ -16,7 +16,7 @@ public class AdvanceBooking extends Ticket {
     public AdvanceBooking(int n) {
         super();
         numDaysUntilGame = n;
-        if (numDaysUntilGame > 15) {
+        if (numDaysUntilGame >= 15) {
             ticketPrice = 25;
         } else {
             ticketPrice = 50;
