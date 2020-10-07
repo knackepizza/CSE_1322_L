@@ -1,0 +1,29 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<GridPane fx:controller="Assignment08.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <TextField GridPane.rowIndex="0" GridPane.columnIndex="0" fx:id="calcInput" promptText="Calculator Input" disable="true" />
+    <Button GridPane.rowIndex="1" GridPane.columnIndex="0" text="0" onAction="#appendNumberZero"/>
+    <Button GridPane.rowIndex="1" GridPane.columnIndex="1" text="1" onAction="#appendNumberOne"/>
+    <Button GridPane.rowIndex="1" GridPane.columnIndex="2" text="2" onAction="#appendNumberTwo"/>
+    <Button GridPane.rowIndex="1" GridPane.columnIndex="3" text="3" onAction="#appendNumberThree"/>
+    <Button GridPane.rowIndex="1" GridPane.columnIndex="4" text="4" onAction="#appendNumberFour"/>
+
+    <Button GridPane.rowIndex="2" GridPane.columnIndex="0" text="5" onAction="#appendNumberFive"/>
+    <Button GridPane.rowIndex="2" GridPane.columnIndex="1" text="6" onAction="#appendNumberSix"/>
+    <Button GridPane.rowIndex="2" GridPane.columnIndex="2" text="7" onAction="#appendNumberSeven"/>
+    <Button GridPane.rowIndex="2" GridPane.columnIndex="3" text="8" onAction="#appendNumberEight"/>
+    <Button GridPane.rowIndex="2" GridPane.columnIndex="4" text="9" onAction="#appendNumberNine"/>
+
+    <Button GridPane.rowIndex="3" GridPane.columnIndex="0" text="+" onAction="#appendAddition"/>
+    <Button GridPane.rowIndex="3" GridPane.columnIndex="1" text="-" onAction="#appendSubtraction"/>
+    <Button GridPane.rowIndex="3" GridPane.columnIndex="2" text="/" onAction="#appendDivision"/>
+    <Button GridPane.rowIndex="3" GridPane.columnIndex="3" text="*" onAction="#appendMultiplication"/>
+    <Button GridPane.rowIndex="3" GridPane.columnIndex="4" text="=" onAction="#calculateInput"/>
+
+    <Button GridPane.rowIndex="4" GridPane.columnIndex="0" text="Clear" onAction="#clearText"/>
+</GridPane>
