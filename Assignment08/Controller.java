@@ -1,7 +1,6 @@
 package Assignment08;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptEngine;
@@ -32,9 +31,9 @@ public class Controller {
     public void appendNumberEight(ActionEvent actionEvent) { calcInput.setText(calcInput.getText() + "8"); }
     public void appendNumberNine(ActionEvent actionEvent)  { calcInput.setText(calcInput.getText() + "9"); }
 
-    public void appendAddition(ActionEvent actionEvent)   { calcInput.setText(calcInput.getText() + "+"); }
-    public void appendSubtraction(ActionEvent actionEvent) { calcInput.setText(calcInput.getText() + "-"); }
+    public void appendAddition(ActionEvent actionEvent)       { calcInput.setText(calcInput.getText() + "+"); }
+    public void appendSubtraction(ActionEvent actionEvent)    { calcInput.setText(calcInput.getText() + "-"); }
     public void appendMultiplication(ActionEvent actionEvent) { calcInput.setText(calcInput.getText() + "*"); }
-    public void appendDivision(ActionEvent actionEvent)  { calcInput.setText(calcInput.getText() + "/"); }
+    public void appendDivision(ActionEvent actionEvent)       { calcInput.setText(calcInput.getText() + "/"); }
 
 }
