@@ -1,3 +1,7 @@
+// Name: Nick Nettleton
+// Class: 1322L
+// Professor Adeojo
+
 package Lab10;
 
 public class Part1 {
