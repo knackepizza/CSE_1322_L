@@ -38,6 +38,7 @@ public class Driver {
 
         // Writing to output.txt
         try {
+            // My working directory has each lab in a folder. I have to use Lab12/output.txt to read into the folder.
             pw = new PrintWriter(new File("Lab12/output.txt"));
 
             pw.println("Total lines = " + lines);
