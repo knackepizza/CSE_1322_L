@@ -5,11 +5,15 @@ package Lab12;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Driver {
     public static void main(String[] args) {
         int lines = 0, words = 0, chars = 0;
+        PrintWriter pw = null;
+
+        // Reading input.txt
         try {
             String dataline = "";
             // My working directory has each lab in a folder. I have to use Lab12/input.txt to read into the folder.
@@ -28,9 +32,22 @@ public class Driver {
             System.out.println("Total words = " + words);
             System.out.println("Total chars = " + chars);
 
-            /* TODO: Output file info to file */
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
+        }
+
+        // Writing to output.txt
+        try {
+            pw = new PrintWriter(new File("Lab12/output.txt"));
+
+            pw.println("Total lines = " + lines);
+            pw.println("Total words = " + words);
+            pw.println("Total chars = " + chars);
+
+        } catch (IOException e) {
+            System.out.println("Error: " + e.getMessage());
+        } finally {
+            if (pw != null) pw.close();
         }
     }
 }
