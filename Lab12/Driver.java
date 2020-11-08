@@ -21,14 +21,19 @@ public class Driver {
             
             while (scnr.hasNextLine()) {
                 dataline = scnr.nextLine();
-                System.out.println(dataline);
+                
+                for (int i = 0; i < dataline.length(); i++) {
+                    chars++;
+                }
+
+                words += dataline.split(" ").length;
                 lines++;
             }
 
             scnr.close();
 
             // Output file info
-            System.out.println("Total lines = " + lines);
+            System.out.println("\nTotal lines = " + lines);
             System.out.println("Total words = " + words);
             System.out.println("Total chars = " + chars);
 
