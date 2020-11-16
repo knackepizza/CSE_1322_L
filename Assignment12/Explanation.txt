@@ -1,0 +1,1 @@
+Multithreading is faster than a sequential one because a program utilizing multithreading can do things simultaneously, instead in a single order.
