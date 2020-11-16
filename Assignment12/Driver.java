@@ -60,7 +60,7 @@ public class Driver {
 		System.out.println("Without Thread Runtime in miliseconds: "+elapsedTime);
 	}
     
-    //Removes the html characters using threads.
+	//Removes the html characters using threads.
 	private static void ThreadTest(HelperClass tws1, HelperClass tws2) {
 		//start timer
 		long startTime = System.currentTimeMillis();
