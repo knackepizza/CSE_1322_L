@@ -12,7 +12,6 @@ import java.util.Scanner;
 public class Driver {
 	public static void main(String[] args) throws FileNotFoundException {
 		//Reading the file and spliting it into 2 lists.
-		String dataline = "";
 		Scanner fileScnr = new Scanner(new File("Assignment12/index.html"));
 		ArrayList<String> words = ScanList(fileScnr);
 		List[] newList = SplitList(words);
