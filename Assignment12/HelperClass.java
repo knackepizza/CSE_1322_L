@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HelperClass implements Runnable {
-	private List<String> words;
+    private List<String> words;
 
     public HelperClass(List<String> words) {
         this.words = words;
@@ -27,8 +27,8 @@ public class HelperClass implements Runnable {
         }
     }
 
-	@Override
-	public void run() {
+    @Override
+    public void run() {
         HelperClass.ReplaceHTML(this.words);
-	}
+    }
 }

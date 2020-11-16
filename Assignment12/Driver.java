@@ -46,7 +46,7 @@ public class Driver {
 	}
 	
 	//Removes the html characters without using threads.
-    private static void NoThreadTest(List<String> tws1, List<String> tws2) {
+	private static void NoThreadTest(List<String> tws1, List<String> tws2) {
 		//start timer
 		long startTime = System.currentTimeMillis();
 
@@ -58,10 +58,10 @@ public class Driver {
 		long elapsedTime = stopTime - startTime;
 		
 		System.out.println("Without Thread Runtime in miliseconds: "+elapsedTime);
-    }
+	}
     
     //Removes the html characters using threads.
-    private static void ThreadTest(HelperClass tws1, HelperClass tws2) {
+	private static void ThreadTest(HelperClass tws1, HelperClass tws2) {
 		//start timer
 		long startTime = System.currentTimeMillis();
 
